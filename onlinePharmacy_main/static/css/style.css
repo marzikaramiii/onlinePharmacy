@@ -2477,7 +2477,7 @@ a.slicknav_btn.slicknav_open .slicknav_icon-bar:first-child { position: absolute
 .main-location > ul > li > ul { opacity: 0; visibility: hidden; -webkit-transform: none; -moz-transform: none; -ms-transform: none; transform: none; display: none; }
 .main-location > ul > li.menu-open > ul { opacity: 1; visibility: visible; -webkit-transform: none; -moz-transform: none; -ms-transform: none; transform: none; display: block; z-index: 3; }
 .main-location .close-menu-location { position: absolute; right: 14px; top: 28px; cursor: pointer; -moz-transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; }
-.main-location .choose-location .foodbakery-radius-location { position: absolute; top: 11px; right: 15px; cursor: pointer; }
+.main-location .choose-location .foodbakery-radius-location { position: absolute; top: 13px;  left:13px; cursor: pointer; }
 .main-location .choose-location .slider.slider-horizontal { width: 63%; }
 .main-location .choose-location .slider.slider-horizontal { margin-bottom: 5px; }
 .main-location .choose-location .select-popup { top: 35px; }
