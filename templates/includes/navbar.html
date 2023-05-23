@@ -33,13 +33,24 @@
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="login-option">
-                        <a class="cs-color cs-popup-joinus-btn login-popup" data-target="#sign-in" data-toggle="modal" href="#user-register">
+                        {% if user.is_authenticated %}
+                        <a class="cs-color cs-popup-joinus-btn login-popup"  data-toggle="modal" href="{% url 'myAccount' %}" style="margin-left: 0;">
+                            داشبورد 
+                             </a>
+                             /
+                        <a class="cs-color cs-popup-joinus-btn login-popup text-danger" data-toggle="modal" href="{% url 'logout' %}" style="margin-left: 0;">
+                            خروج 
+                             </a>                           
+                        {% else %}
+                        <a class="cs-color cs-popup-joinus-btn login-popup" data-toggle="modal" href="{% url 'login' %}" style="margin-left: 0;">
                             ورود 
-                            /
-                             <span><a href=" {% url 'registerUser' %} " style="margin-left: 10px;">ثبت نام</a></span>
-                        </a>
-                            <a class="get-start-btn" href="{% url 'registerVendor' %}">
+                             </a>
+                             /
+                             <span><a style="font-size: 13px;color: #333;margin-left: 15px;" class="cs-color" href=" {% url 'registerUser' %} " style="margin-left: 10px;">ثبت نام</a></span>
+                       
+                            <a class="get-start-btn " href="{% url 'registerVendor' %}">
                             ثبت داروخانه </a>
+                            {% endif %}
                     </div>
                 </div>
             </div>
