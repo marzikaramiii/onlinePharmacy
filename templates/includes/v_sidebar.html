@@ -1,0 +1,13 @@
+<div class="user-account-nav user-account-sidebar">
+    <div class="user-nav-list">
+        <ul>
+            <li class="{% if '/accounts/vendorDashboard/' == request.path or '/accounts/vendor/' == request.path %}active{% endif %}"><a href="{% url 'vendorDashboard' %}"><i class="icon-dashboard3"></i>داشبورد</a></li>
+            <li class="{% if 'profile' in request.path %}active{% endif %}"><a href="{% url 'vprofile' %}"><i class="icon-building"></i>داروخانه من</a></li>
+            <li><a href="restaurant-menu-builder.html"><i class="icon-menu5"></i>ساخت منو </a></li>
+            <li><a href="restaurant-orders.html"><i class="icon-add_shopping_cart"></i>سفارشات</a></li>
+            <li><a href="restaurant-statement.html"><i class="icon-file-text22"></i>Statement</a></li>
+            <li><a href="restaurant-change-password.html"><i class="icon-unlock-alt"></i>تغییر رمز عبور</a></li>
+            <li><a class="logout-btn" href="registration.html"><i class="icon-log-out"></i>خروج</a></li>
+        </ul>
+    </div>
+</div>

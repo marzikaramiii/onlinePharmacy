@@ -41,7 +41,7 @@ class User(AbstractBaseUser):
     VENDOR=1
     CUSTOMER=2
     ROLE_CHOICE=(
-        (VENDOR,'Pharmacy'),
+        (VENDOR,'Vendor'),
         (CUSTOMER,'Customer'),
     )
     first_name=models.CharField(max_length=50)
@@ -75,7 +75,7 @@ class User(AbstractBaseUser):
     
     def get_role(self):
         if self.role == 1:
-            user_role="Pharmacy"
+            user_role="Vendor"
         elif self.role == 2:
             user_role="Customer"
         return user_role
@@ -97,9 +97,10 @@ class UserProfile(models.Model):
     created_at=models.DateTimeField(auto_now_add=True)
     modified_at=models.DateTimeField(auto_now=True)
 
+
     def __str__(self):
         return self.user.email
-
+    
 
 
     
