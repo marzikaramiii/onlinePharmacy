@@ -38,10 +38,10 @@ class UserManager(BaseUserManager):
 
 
 class User(AbstractBaseUser):
-    PHARMACY=1
+    VENDOR=1
     CUSTOMER=2
     ROLE_CHOICE=(
-        (PHARMACY,'Pharmacy'),
+        (VENDOR,'Pharmacy'),
         (CUSTOMER,'Customer'),
     )
     first_name=models.CharField(max_length=50)
